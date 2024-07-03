@@ -15,14 +15,16 @@ export const LoginButton = ({
 }: LoginButtonProps) => {
   const router = useRouter();
   const onClick = () => {
-    router.push("/auth/login");
+    router.push("/auth/login")
   };
   if (mode === "modal") {
-    return <span>TODO:Implement modal</span>;
+    return <span className="">TODO: Implement modal</span>;
   }
   return (
-    <span onClick={onClick} className="cursor-pointer">
-      {children}
-    </span>
+    <>
+      <span onClick={onClick} className="cursor-pointer">
+        {children}
+      </span>
+    </>
   );
 };
